@@ -1,8 +1,8 @@
 <template>
   <!-- <HelloWorld /> -->
   <!-- router-view를 통해 app.vue에서 화면 라우팅이 시작 된다.-->
-  <!-- <HeaderComponent /> -->
   <v-app>
+    <HeaderComponent />
     <v-main>
       <router-view />
     </v-main>
@@ -14,13 +14,14 @@
 <script>
 // App.vue는 Vue애플리케이션의 루트 컴포넌트(최상단 화면, 재활용이 가능한 화면)
 // import HelloWorld from './components/HelloWorld.vue'
-// import HeaderComponent from './components/HeaderComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
 // import FooterComponent from './components/FooterComponent.vue';
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    // HeaderComponent, FooterComponent
+    HeaderComponent
+    //, FooterComponent
   }
 }
 </script>

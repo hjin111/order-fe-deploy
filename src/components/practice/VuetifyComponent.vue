@@ -74,7 +74,7 @@
             </v-card>
         </v-dialog>
 
-        <v-btn href="/practice/modeling">라우팅1</v-btn>
+        <v-btn href="/practice/modeling">일반라우팅</v-btn>
         <v-btn :to="{path: '/practice/modeling'}">SPA라우팅(ROUTER 기능 활용)</v-btn>
         <v-btn :to="{name: 'ModelingComponent'}">SPA라우팅(name 호출)</v-btn>
 </template>

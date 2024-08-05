@@ -12,7 +12,9 @@
 
     <h1>{{ count }}</h1>
     <button @click="increament()">increment</button>
+
     <h1>{{ doubleCount }}</h1>
+
     <br>
     <input type="number" v-model="count2">
     <button @click="increament2()">increment2</button>
@@ -26,7 +28,8 @@
                 value1:"phython", // 여기에 데이터가 위에 있는 화면으로 데이터가 바인딩 됨
                 value2:"java",
                 count:0,
-                count2:0
+                count2:0,
+                isLogin : false
             }
         },
 
@@ -36,7 +39,9 @@
                 return this.count * 2;
             }
         },
-
+        created(){
+            alert("CREATED 함수 호출")
+        },
         methods:{
             showValue(){
                 alert(this.value2);

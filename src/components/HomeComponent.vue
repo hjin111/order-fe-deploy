@@ -1,7 +1,9 @@
 <template>
-    <h1>this is homecomponent</h1>
+    <div></div>
 </template>
     
 <script>
-export default{};
+export default{
+
+};
 </script>

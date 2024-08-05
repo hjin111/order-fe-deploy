@@ -33,7 +33,7 @@ import axios from 'axios';
                 memberList: []
             }
         },
-        async created(){
+        async created(){ // 화면이 열리기 전에 데이터 받아오기
             
             const response = await axios.get('http://localhost:8080/rest/member/list');
             this.memberList = response.data.result;
