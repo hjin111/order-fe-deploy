@@ -1,6 +1,7 @@
 import MemberCreate from '@/views/MemberCreate.vue';
 import LoginPage from '@/views/LoginPage.vue';
 import MemberList from '@/views/MemberList.vue';
+import MyPage from '@/views/MyPage.vue';
 
 export const memberRouter = [
     {
@@ -17,5 +18,10 @@ export const memberRouter = [
         path:'/member/list',
         name:'MemberList',
         component:MemberList
+    },
+    {
+        path:'/mypage',
+        name:'MyPage',
+        component:MyPage
     }
 ]

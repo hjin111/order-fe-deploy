@@ -24,7 +24,7 @@
   
   <script>
   export default {
-    // 필요한 컴포넌트 로직 작성
+    
   };
   </script>
   

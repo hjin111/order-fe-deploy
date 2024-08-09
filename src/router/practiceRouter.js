@@ -7,6 +7,8 @@ import AxiosTestComponent from '@/components/practice/AxiosTestComponent.vue';
 import RouterTestComponent from '@/components/practice/RouterTestComponent.vue';
 import FlintMainComponent from '@/components/practice/FlintMainComponent.vue';
 import VcalendarComponent from '@/components/practice/VcalendarComponent.vue';
+import StoreTestComponent from '@/components/practice/StoreTestComponent.vue';
+
 
 export const practiceRouter = [
     {
@@ -53,6 +55,11 @@ export const practiceRouter = [
         path: '/practice/vcalendar',
         name: 'VcalendarComponent',
         component: VcalendarComponent
-    }
+    },
+    {
+        path: '/practice/storetest',
+        name: 'StoreTestComponent',
+        component: StoreTestComponent
+    },
 
 ]

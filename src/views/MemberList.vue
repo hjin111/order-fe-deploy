@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-row>
+        <v-row justify="center">
             <v-col>
                 <v-card>
                     <v-card-title class="text-center text-h5">
@@ -27,17 +27,30 @@ import axios from 'axios';
             return{
                 tableHeaders:[{title:'ID', key:'id', align:'start'},
                               {title:'이름', key:'name', align:'start'},
-                              {title:'email', key:'email', align:'start'}],
+                              {title:'email', key:'email', align:'start'},
+                              {title:'주문수량', key:'orderCount', align:'start'}],
                 memberList:[]
             }
         },
         async created(){
-            const token = localStorage.getItem('token');
-            // 토큰 세팅
-            const headers = {Authorization : `Bearer ${token}`};
-            // { "headers" : {"Authorization" : 'Barer 토큰값'}}
-            const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/member/list`, {headers}); // {"headers":headers} 을 일반적으로 {headers} 라고 씀
-            this.memberList = response.data.result.content;
+
+            // const token = localStorage.getItem('token');
+            // // 토큰 세팅
+            // const headers = {Authorization : `Bearer ${token}`};
+            // // { "headers" : {"Authorization" : 'Barer 토큰값'}}
+            // const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/member/list`, {headers}); // {"headers":headers} 을 일반적으로 {headers} 라고 씀
+            try{
+                const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/member/list`);
+                this.memberList = response.data.result.content;
+            }catch(e){
+                console.log(e);
+            }
+          
+
         }
     }
 </script>
+
+<style>
+
+</style>
